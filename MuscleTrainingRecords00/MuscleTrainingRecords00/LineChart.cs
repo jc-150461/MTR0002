@@ -106,41 +106,15 @@ namespace MuscleTrainingRecords00
                 MajorStep = 10,
                 MajorGridlineStyle = LineStyle.Solid,
                 MinorGridlineStyle = LineStyle.Dot,
-                ExtraGridlines = new double[] { 1, 2, 3, 8, 9, 10 },
-                ExtraGridlineThickness = 3,
-                ExtraGridlineColor = OxyColors.SkyBlue,
-
-
-
-
-
-
+                
             };
             Model.Axes.Add(axisY);
 
-            /*
-            var axisX = new LinearAxis() //Y軸　線
-            {
-                Title = "体脂肪率(%)",
-                IsZoomEnabled = false,
-                Position = AxisPosition.Left,
-                Maximum = 40,
-                Minimum = 20,
-                MajorStep = 1,
-                MajorGridlineStyle = LineStyle.Solid,
-                MinorGridlineStyle = LineStyle.Dot,
-                ExtraGridlines = new double[] { 1, 2, 3, 8, 9, 10 },
-                ExtraGridlineThickness = 3,
-                ExtraGridlineColor = OxyColors.SkyBlue,
-            };
-            Model.Axes.Add(axisX);
-            */
 
 
 
-
-            var startDate = DateTime.Today;
-            var endDate = DateTime.Today.AddDays(+7);
+            var startDate = DateTime.Today.AddDays(-3);
+            var endDate = DateTime.Today.AddDays(+4);
 
             var minValue = DateTimeAxis.ToDouble(startDate);
             var maxValue = DateTimeAxis.ToDouble(endDate);
